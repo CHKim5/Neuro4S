@@ -27,7 +27,11 @@ library(Neuro4S)
 ```
 
 ### Virus titer
-
+#### Test Ct SD
+```
 Ct_check(File_name)
-
-Ct_res(File_name,con_vir,gene_bp)
+```
+#### Virus titer results
+```
+Ct_res(File_name,con_vir,gene_bp,Reference_Ct,Con_for_normalization)
+```
