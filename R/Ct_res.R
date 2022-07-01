@@ -12,7 +12,7 @@
 #' @examples Ct_res("220621 inhibitory ACC calcium.xls",5*10^12,6437,c("10000","1000","100","10","1"),"con")
 Ct_res<-function(File_name,con_vir,gene_bp,Reference_Ct,Con_for_normalization){
   rdpart <-(6.02*10^11)/(gene_bp*684)
-  Data<-read.xlsx(File_name,sheetName = "Results")[-(1:41),];colnames(Data)<-Data[1,];Data<-Data[-1,]
+  Data<-xlsx::read.xlsx(File_name,sheetName = "Results")[-(1:41),];colnames(Data)<-Data[1,];Data<-Data[-1,]
   Data<-na.omit(Data);Data<-Data[order(Data$`Sample Name`),]
 
   Data_ref<-Data %>% filter(`Sample Name` %in% Reference_Ct)

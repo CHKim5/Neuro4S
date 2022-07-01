@@ -8,7 +8,7 @@
 #' @examples Ct_check("220621 inhibitory ACC calcium.xls")
 #'
 Ct_check<-function(File_name){
-  Data<-read.xlsx(File_name,sheetName = "Results")[-(1:41),];colnames(Data)<-Data[1,];Data<-Data[-1,]
+  Data<-xlsx::read.xlsx(File_name,sheetName = "Results")[-(1:41),];colnames(Data)<-Data[1,];Data<-Data[-1,]
   Data<-na.omit(Data);Data<-Data[order(Data$`Sample Name`),]
   Data_to_reconsider<-Data %>% filter(`Ct SD`>0.3)
   if(nrow(Data_to_reconsider)!=0){
