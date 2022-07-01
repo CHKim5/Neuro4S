@@ -1,0 +1,19 @@
+Package: Neuro4S
+Type: Package
+Title: Neuro4S
+Version: 0.1.0
+Authors@R: 
+    person(given = "CHANG-HO",
+           family = "KIM",
+           role = c("aut", "cre"),
+           email = "demizor3@gmail.com")
+Maintainer: <demizor3@gmail.com>
+Description: handy functions for personal usage
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Imports: 
+    xlsx,
+    dplyr
